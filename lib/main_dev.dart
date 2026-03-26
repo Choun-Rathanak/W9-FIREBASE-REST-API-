@@ -1,6 +1,8 @@
 import 'package:provider/provider.dart';
 import 'package:w9_firebase/data/repositories/artists/artist_repository.dart';
 import 'package:w9_firebase/data/repositories/artists/artist_repository_firebase.dart';
+import 'package:w9_firebase/data/repositories/songwithartist/song_with_artist_repository.dart';
+import 'package:w9_firebase/data/repositories/songwithartist/song_with_artist_repository_firebase.dart';
  
 import 'data/repositories/songs/song_repository_firebase.dart';
 import 'main_common.dart';
@@ -27,6 +29,8 @@ List<InheritedProvider> get devProviders {
     ),
     // inject the repo Artist
     Provider<ArtistRepository>(create: (_) => ArtistRepositoryFirebase()),
+
+    Provider<SongWithArtistRepository>(create: (_) => SongWithArtistRepositoryFirebase()),
   ];
 }
 
